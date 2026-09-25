@@ -1,7 +1,7 @@
 import { test, expect, Page } from '@playwright/test';
 import { faker } from '@faker-js/faker';
 
-export async function paginationWebTables(page: Page) {
+export async function addMoreDataWebTables(page: Page) {
   await page.evaluate(() => {
     const style = document.createElement('style');
     style.innerHTML = `
@@ -68,5 +68,5 @@ test('website DemoQA project - Web Tables Pagination Test', async ({ page }) => 
     timeout: 60000
   });
 
-  await paginationWebTables(page);
+  await addMoreDataWebTables(page);
 });
